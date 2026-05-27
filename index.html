@@ -207,7 +207,7 @@
     officeTel:  '+381/ 21 551-311',
     website:    'www.info-graf.rs',
     websiteUrl: 'https://www.info-graf.rs',
-    address:    'Joakima Vujića 16, 21000 Novi Sad, Serbia'
+    address:    'Joakima Vujića 16, 21000 Novi Sad, Serbia', addressUrl: 'https://maps.app.goo.gl/bfKYc2w2paYop8Yy9'
   };
 
   var DEFAULTS = {
@@ -257,7 +257,7 @@
     var officeTel = esc(COMPANY.officeTel);
     var website   = esc(COMPANY.website);
     var websiteUrl = esc(COMPANY.websiteUrl);
-    var address   = esc(COMPANY.address);
+    var address   = esc(COMPANY.address); var addressUrl = esc(COMPANY.addressUrl);
 
     var mobileHref = 'tel:' + mobile.replace(/[^+0-9]/g,'');
     var officeHref = 'tel:' + officeTel.replace(/[^+0-9]/g,'');
@@ -287,7 +287,7 @@
                 row(ICON_PHONE, '<a href="'+mobileHref+'" style="color:'+TEXT+';text-decoration:none;">'+mobile+'</a>') +
                 row(ICON_GLOBE, '<a href="'+websiteUrl+'" style="color:'+TEXT+';text-decoration:none;">'+website+'</a>') +
                 row(ICON_PHONE, '<a href="'+officeHref+'" style="color:'+TEXT+';text-decoration:none;">'+officeTel+'</a>') +
-                row(ICON_PIN,   '<span style="color:'+TEXT+';">'+address+'</span>') +
+                row(ICON_PIN,   '<a href="'+addressUrl+'" target="_blank" rel="noopener" style="color:'+TEXT+';text-decoration:none;">'+address+'</a>') +
               '</table>' +
             '</td></tr>' +
           '</table>' +
